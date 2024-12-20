@@ -34,7 +34,9 @@ void loadExercises(const char* EXERCISEFILEPATH) {
     }
 
     // ToCode: to read a list of the exercises from the given file
-    while ( ) {
+    while ((c=fgetc(file)!=EOF)) { // read characters 
+    	
+    	putchar(c); // put characters
     	
         if (exercise_list_size >= MAX_EXERCISES){
         	break;
@@ -60,6 +62,15 @@ void inputExercise(HealthData* health_data) {
     
     // ToCode: to provide the options for the exercises to be selected
     printf("The list of exercises: \n");
+    FILE *file = fopen(EXERCISEFILEPATH, "r");
+    if (file == NULL) {
+        printf("There is no file for exercises! \n");
+        return;
+    }
+    fscanf(file, "%c", &choice);
+    printf("%c\n", choice); // print exercises.txt
+    fclose(file);
+    return 0;
 
 
     // ToCode: to enter the exercise to be chosen with exit option
