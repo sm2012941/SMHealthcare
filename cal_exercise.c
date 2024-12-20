@@ -82,6 +82,7 @@ void inputExercise(HealthData* health_data) {
     scanf("%d", &duration);
 
     // ToCode: to enter the selected exercise and total calcories burned in the health data
-    
+    int tot_cal_burned;
+	tot_cal_burned = choice * duration; // calculate the total calories burned
 
 }

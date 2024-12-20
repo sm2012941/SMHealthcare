@@ -46,22 +46,22 @@ int main() {
 		// ToCode: to run the sysmtem based on the user's choice
         switch (choice) {
             case 1:
-            	
+            	loadExercises(); // print the information in "excercises.txt"
                 break;
                 
             case 2:
-            	
+            	loadDiets(); // print the information in "diets.txt"
                 break;
                 
             case 3:
-				
+				printHealthData // print the healthdata
 				break;
                 
             case 4:
             	
     			printf("Exit the system.\n");
     			printf("=======================================================================\n");
-                break;
+                break; // exit the system
                 
             default:
                 printf("[Error] Invalid option. \n");

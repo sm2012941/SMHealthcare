@@ -30,12 +30,11 @@ void loadDiets(const char* DIETFILEPATH) {
     FILE *file = fopen(DIETFILEPATH, "r");
     if (file == NULL) {
         printf("There is no file for diets! \n");
-        return;
     }
 
      // ToCode: to read a list of the diets from the given file
-    while () {
-    	
+    while ((fgets(str, sizeof(str), file)) != 0)
+    	printf("%s", str); // print a list of the diets from the given file
         if (diet_list_size >= MAX_DIETS){
         	break;
 		}
@@ -57,15 +56,17 @@ void inputDiet(HealthData* health_data) {
     
     // ToCode: to provide the options for the diets to be selected
     printf("The list of diets:\n");
+    loadDiets();
     
     
 	// ToCode: to enter the diet to be chosen with exit option
-    
+
 
     // ToCode: to enter the selected diet in the health data
     
 
     // ToCode: to enter the total calories intake in the health data
+    int tot_cal_intake;
 
 
 }
